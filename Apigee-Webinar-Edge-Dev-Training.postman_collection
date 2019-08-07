@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "43f77808-f471-43bc-93f6-97369003e4ad",
+		"name": "Apigee-Webinar-Edge-Dev-Training",
+		"description": "This collection contains all the calls as part of the labs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{org}}-{{env}}.apigee.net/v1/products",
+					"protocol": "https",
+					"host": [
+						"{{org}}-{{env}}",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"products"
+					]
+				},
+				"description": "Detailed list of all Products"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /products/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{org}}-{{env}}.apigee.net/v1/products/{{product_id}}",
+					"protocol": "https",
+					"host": [
+						"{{org}}-{{env}}",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"products",
+						"{{product_id}}"
+					]
+				},
+				"description": "Detailed list of Product given the productId"
+			},
+			"response": []
+		}
+	]
+}
